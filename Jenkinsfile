@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 34ed6bbc0f28b9e7b7e8767520ddaa6541112647
 pipeline {
   agent any
 
@@ -29,4 +32,8 @@ pipeline {
       }
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 34ed6bbc0f28b9e7b7e8767520ddaa6541112647
