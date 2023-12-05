@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 34ed6bbc0f28b9e7b7e8767520ddaa6541112647
 pipeline {
   agent any
 
@@ -13,27 +9,24 @@ pipeline {
     stage('Checkout') {
       steps {
         git branch: 'main', 
-        url: '<URL>'
+        url: 'https://github.com/rheehot/source-maven-java-spring-hello-webapp/''
       }
     }
     stage('Build') {
       steps {
-        sh '<COMMAND>'
+        sh 'mvn clean'
       }
     }
     stage('Test') {
       steps {
-        sh '<COMMAND>'
+        sh 'mvn test'
       }
     }
     stage('Deploy') {
       steps {
-        deploy adapters: [tomcat9(credentialsId: '<NAME>', url: '<URL>')], contextPath: null, war: 'path/to/war'
+        deploy adapters: [tomcat9(credentialsId: 'admin', path =:'', url: '15.164.175.173:8080/')], 
+        contextPath: null, war: 'target/hello-world.war'
       }
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 34ed6bbc0f28b9e7b7e8767520ddaa6541112647
