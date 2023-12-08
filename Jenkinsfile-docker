@@ -41,7 +41,8 @@ pipeline {
       agent any
       steps {
         withDockerRegistry(credentialsId: 'docker-hub-token', url: 'https://index.docker.io/v1/') {
-          sh 'docker image push https://github.com/rheehot/source-maven-java-spring-hello-webapp'
+            sh 'docker image push rheehot/myhello:$BUILD_NUMBER'
+            sh 'docker image push rheehot/myhello:latest'
         }
       }
     }
