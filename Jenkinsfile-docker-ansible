@@ -49,7 +49,7 @@ pipeline {
     stage('Run Docker Container') {
       agent {
         docker { 
-          image 'ghcr.io/c1t1d0s7/jenkins-ansible-agent'
+          image 'docker image rheehot/jenkins-ansible-agent'
           args '-u 0:0 -e DOCKER_HOST=tcp://172.31.22.38:2375'
         }
       }
